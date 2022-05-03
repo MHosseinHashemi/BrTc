@@ -1,21 +1,24 @@
+from ctypes import alignment
+from enum import auto
 from re import X
-from keras.models import load_model
+from tensorflow.keras.models import load_model
 import streamlit as st
 from io import BytesIO
 import tensorflow as tf
 from PIL import Image, ImageOps
 import cv2
 import numpy as np
-
+from tensorflow import keras
 
 
 # Load model
-my_model = load_model('effnet.h5')
+my_model = load_model("effnet.h5")
 
 # UI Design
 st.set_page_config(layout='wide')
 st.sidebar.markdown('This Web-Application allows you to classify the tumor from an MRI Pic')
-st.header('Tumur Classifier')
+st.header('Tumor Classifier')
+left_col, center_col, right_col = st.columns(3) 
 
 
 # a function to choose the right label to show
@@ -33,6 +36,7 @@ def labelizer(p):
 
 # a function to manipulate the input pic
 def classifier(image, model):
+    image = np.array(image)
     image = cv2.resize(image, (150,150))
     image = image.reshape(1,150,150,3)
     # predicting the label
@@ -43,22 +47,17 @@ def classifier(image, model):
 
     return output
 
-    
 
-
+   
 
 input_file = st.file_uploader("Upload MRI pic", type=['jpg','png'])
 if input_file is None:
     st.text("Please upload a picture")
 else:
     img = Image.open(input_file)
-    st.image(img, use_column_width=True)
-    pred = classifier(img, my_model)
+    with center_col:
+        st.image(img, use_column_width=True)
+        pred = classifier(img, my_model)
     st.success(pred)
     
-
-
-
-
-
 
