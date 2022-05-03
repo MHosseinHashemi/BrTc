@@ -8,7 +8,7 @@
 7. Install the CUDA and Copy Paste the CUDnn Folder Contents into the cuda instalition location
 8. Open the windows Environment Variable Editor and Pass the CUDA related Path as a new environment variable
 9. Reboot
-10. open cmd and create an vivenv and then activate it
+10. open cmd and create an venv and then activate it
 11. install the gpu version of tensorflow 
 12. open python in cmd and import tensorflow 
 13. type these two command to make sure tf is now accessing your GPU :
