@@ -2,6 +2,10 @@
 
 This project focuses on the classification of brain tumor images using convolutional neural networks (CNNs). It provides a pipeline for preprocessing the data, training different CNN models, and visualizing the results.
 
+
+https://github.com/MHosseinHashemi/Brain_Tumor_Classification/assets/90381570/68a382e2-3006-44a9-a2de-69d172d10036
+
+
 ## Table of Contents
 - [Introduction](##introduction)
 - [Dependencies](##dependencies)
