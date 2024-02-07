@@ -1,4 +1,4 @@
-# Brain Tumor Classification
+# BrTc: Brain Tumor Classification 
 
 This project focuses on the classification of brain tumor images using convolutional neural networks (CNNs). It provides a pipeline for preprocessing the data, training different CNN models, and visualizing the results.
 
