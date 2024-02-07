@@ -7,11 +7,11 @@ https://github.com/MHosseinHashemi/Brain_Tumor_Classification/assets/90381570/68
 
 
 ## Table of Contents
-- [Introduction](##introduction)
-- [Dependencies](##dependencies)
-- [Data Preprocessing](##data-preprocessing)
-- [Model Training](##model-training)
-- [Visualizations](##visualizations)
+- [Introduction]()
+- [Dependencies]()
+- [Data Preprocessing]()
+- [Model Training]()
+- [Visualizations]()
 
 ## Introduction
 The goal of this project is to classify brain tumor images into four categories: glioma tumor, no tumor, meningioma tumor, and pituitary tumor. The code provided performs the following steps:
